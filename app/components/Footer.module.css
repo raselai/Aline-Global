@@ -1,0 +1,100 @@
+.footer {
+  background: linear-gradient(135deg, #1f2937 0%, #0f172a 100%);
+  color: #e5e7eb;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.brandBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.brand {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #9ca3af;
+}
+
+.address {
+  font-style: normal;
+  line-height: 1.6;
+  color: #d1d5db;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+}
+
+.socials {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, color 180ms ease;
+  color: #cbd5e1;
+}
+
+.socialLink:hover {
+  transform: translateY(-2px);
+  background: rgba(99, 102, 241, 0.18);
+  border-color: rgba(99, 102, 241, 0.45);
+  color: #ffffff;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.bottomBar {
+  margin-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.75rem;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.copy {
+  opacity: 0.9;
+}
+
+@media (min-width: 640px) {
+  .container {
+    grid-template-columns: 1.2fr 2fr 1fr;
+    align-items: start;
+  }
+}
+
+
