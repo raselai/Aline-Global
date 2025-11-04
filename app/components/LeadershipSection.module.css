@@ -1,16 +1,18 @@
 .leadershipSection {
-  background: radial-gradient(1200px 400px at 50% -50%, #f0a6ca55 0%, transparent 60%),
+  /* 🎨 Beautiful purple gradient background - full width for all screen sizes */
+  background: radial-gradient(100vw 400px at 50% -50%, #f0a6ca55 0%, transparent 60%),
               linear-gradient(135deg, #7c1d5d 0%, #4c1447 60%, #3a0d3a 100%);
+  width: 100%; /* 📐 Ensure full width coverage */
   padding: 3rem 0 2rem 0;
   color: #fff;
 }
 
 .sectionHeader {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1600px; /* 📐 Increased from 1200px for consistency */
   margin-left: auto;
   margin-right: auto;
-  text-align: left;
+  text-align: center; /* 📍 Centered the title */
 }
 
 .title {
@@ -26,11 +28,13 @@
   background: linear-gradient(90deg, #f9c74f, #f94144);
   border-radius: 9999px;
   margin-top: 0.75rem;
+  margin-left: auto; /* 📍 Center the divider */
+  margin-right: auto; /* 📍 Center the divider */
 }
 
 .grid {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1600px; /* 📐 Increased from 1200px for consistency */
   margin: 2rem auto 0 auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -121,7 +125,7 @@
 
 .bottomCtaWrap {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1600px; /* 📐 Increased from 1200px for consistency */
   margin: 1.5rem auto 0 auto;
   display: flex;
   justify-content: center;

@@ -3,13 +3,11 @@
 'use client' // 🔧 This tells Next.js we're using browser features (like clicks, state)
 
 import { useState, useEffect } from 'react' // 🪝 React hooks for state and side effects
+import Link from 'next/link' // 🔗 Next.js Link component for navigation
 import styles from './page.module.css'
 import LeadershipSection from './components/LeadershipSection'
 
 export default function Home() {
-  // 📱 State to track if mobile menu is open or closed
-  const [menuOpen, setMenuOpen] = useState(false) // Starts as 'false' (closed)
-
   // 🎬 State to track if intro animation is showing
   const [showIntro, setShowIntro] = useState(true) // Starts as 'true' (show intro first)
 
@@ -75,61 +73,8 @@ export default function Home() {
     }
   }, [showIntro, businessSectors.length])
 
-  // 🍔 Function to toggle menu when hamburger is clicked
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen) // If open, close it. If closed, open it.
-  }
   return (
     <div className={styles.container}>
-
-      {/* 📖 NAVIGATION BAR - Top menu bar */}
-      <nav className={styles.navbar}>
-        <div className={styles.navContent}>
-          {/* Logo/Company Name */}
-          <div className={styles.logo}>
-            <h2>Aline Global Ltd</h2>
-          </div>
-
-          {/* 🍔 HAMBURGER BUTTON - Only visible on mobile */}
-          <button
-            className={styles.hamburger}
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            {/* Three horizontal lines that make up the hamburger icon */}
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-
-          {/* Navigation menu items */}
-          {/* 📱 The menu will show/hide on mobile based on menuOpen state */}
-          <ul className={`${styles.navMenu} ${menuOpen ? styles.navMenuActive : ''}`}>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About us</a></li>
-
-            {/* 📖 BUSINESS DROPDOWN - This menu item has a submenu */}
-            <li className={styles.dropdown}>
-              <a href="#business">Business</a>
-
-              {/* Dropdown submenu - appears on hover */}
-              <ul className={styles.dropdownMenu}>
-                <li><a href="#garments">Garments & Apparel</a></li>
-                <li><a href="#manufacturing">Manufacturing</a></li>
-                <li><a href="#pharmaceutical">Pharmaceutical</a></li>
-                <li><a href="#realestate">Real Estate & Development</a></li>
-                <li><a href="#software">IT & Software</a></li>
-                <li><a href="#media-tv">Media & TV Channel</a></li>
-                <li><a href="#aline">Aline Brand & Product Development</a></li>
-              </ul>
-            </li>
-
-            <li><a href="#media">Media</a></li>
-            <li><a href="#careers">Careers</a></li>
-            <li><a href="#contact">Contact us</a></li>
-          </ul>
-        </div>
-      </nav>
 
       {/* 🎬 HERO SECTION - Animated intro + Business slideshow */}
       <section className={styles.hero}>

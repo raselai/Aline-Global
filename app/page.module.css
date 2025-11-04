@@ -429,9 +429,10 @@
    ======================================== */
 
 .main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* 📐 Removed max-width to allow full-width sections */
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* ========================================
@@ -440,7 +441,10 @@
 
 .aboutSection {
   padding: 5rem 2rem;
-  background-color: #ffffff;
+  /* 🎨 Beautiful purple gradient background - full width for all screen sizes */
+  background: radial-gradient(100vw 400px at 50% -50%, #f0a6ca55 0%, transparent 60%),
+              linear-gradient(135deg, #7c1d5d 0%, #4c1447 60%, #3a0d3a 100%);
+  width: 100%; /* 📐 Ensure full width coverage */
 }
 
 /* 📖 Section Header */
@@ -452,7 +456,7 @@
 .sectionTitle {
   font-size: 3rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #ffffff; /* 🎨 Changed to white for purple background */
   margin-bottom: 1rem;
   letter-spacing: 1px;
 }
@@ -467,8 +471,9 @@
 
 /* 📝 About Content Container */
 .aboutContent {
-  max-width: 1000px;
+  max-width: 1600px; /* 📐 Increased from 1000px for wider desktop coverage */
   margin: 0 auto;
+  padding: 0 2rem; /* Add padding for mobile */
 }
 
 /* 📖 About Description */
@@ -476,32 +481,19 @@
   margin-bottom: 4rem;
   position: relative;
 
-  /* 🎨 Beautiful curved gray background */
-  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-  border-radius: 30px;
+  /* 🎨 White background like MD Message */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
   padding: 3rem 3.5rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
-
-  /* 📦 Add subtle border */
-  border: 1px solid #e2e8f0;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
 }
 
-/* ✨ Decorative curved wave at top */
-.aboutDescription::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #4a5568 0%, #2d3748 50%, #4a5568 100%);
-  border-radius: 30px 30px 0 0;
-}
+/* ✨ Decorative curved wave removed for clean white background */
 
 .aboutText {
   font-size: 1.2rem;
   line-height: 1.8;
-  color: #4a5568;
+  color: #4a5568; /* 🎨 Gray text like MD Message */
   margin-bottom: 1.5rem;
   text-align: justify;
   position: relative;
@@ -513,32 +505,40 @@
 }
 
 .aboutText strong {
-  color: #2d3748;
+  color: #2d3748; /* 🎨 Darker gray for emphasis */
   font-weight: 600;
 }
 
 /* 🏭 Industries Grid */
 .industriesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* 📐 4 columns for 8 cards (2 rows) */
   gap: 1.5rem;
   margin-bottom: 4rem;
+  justify-items: center; /* 📍 Center cards horizontally */
+  max-width: 1300px; /* 📐 Limit max width for better centering */
+  margin-left: auto; /* 📍 Center the grid container */
+  margin-right: auto; /* 📍 Center the grid container */
 }
 
 .industryCard {
-  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-  border: 2px solid #e2e8f0;
+  /* 🎨 Glass effect for purple background */
+  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
+  border: 2px solid rgba(255,255,255,0.12);
   border-radius: 12px;
   padding: 2rem 1.5rem;
   text-align: center;
   transition: all 0.3s ease;
   cursor: pointer;
+  width: 100%; /* 📐 Full width within grid cell */
+  max-width: 280px; /* 📐 Consistent max width for all cards */
 }
 
 .industryCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border-color: #4a5568;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(249, 199, 79, 0.45); /* 🎨 Golden highlight on hover */
+  background: rgba(249, 199, 79, 0.15);
 }
 
 .industryIcon {
@@ -556,7 +556,7 @@
 .industryName {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #2d3748;
+  color: #ffffff; /* 🎨 Changed to white for purple background */
   margin: 0;
 }
 
@@ -608,7 +608,10 @@
 
 .mdSection {
   padding: 5rem 2rem;
-  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+  /* 🎨 Beautiful purple gradient background - full width for all screen sizes */
+  background: radial-gradient(100vw 400px at 50% -50%, #f0a6ca55 0%, transparent 60%),
+              linear-gradient(135deg, #7c1d5d 0%, #4c1447 60%, #3a0d3a 100%);
+  width: 100%; /* 📐 Ensure full width coverage */
   position: relative;
   overflow: hidden;
 }
@@ -637,8 +640,9 @@
 }
 
 .mdContainer {
-  max-width: 1200px;
+  max-width: 1600px; /* 📐 Increased from 1200px for wider desktop coverage */
   margin: 0 auto;
+  padding: 0 2rem; /* Add padding for mobile */
   position: relative;
   z-index: 1;
 }
@@ -756,6 +760,11 @@
   overflow: hidden; /* Hide logos outside viewport */
 }
 
+/* 📝 Subsidiary section title - Gray color for white background */
+.subsidiarySection .sectionTitle {
+  color: #4a5568; /* 🎨 Gray color so it shows on white background */
+}
+
 /* 🎬 Logo Slider Container */
 .logoSlider {
   width: 100%;
@@ -839,8 +848,16 @@
 }
 
 /* ========================================
-   📖 RESPONSIVE DESIGN - For mobile devices
+   📖 RESPONSIVE DESIGN - For tablet and mobile devices
    ======================================== */
+
+/* 📱 Tablet - 3 columns for industry cards */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .industriesGrid {
+    grid-template-columns: repeat(3, 1fr); /* 📱 3 columns on tablet */
+    max-width: 900px; /* 📐 Limit width on tablet */
+  }
+}
 
 @media (max-width: 768px) {
   /* 📱 Mobile navbar - full width, no centering */
@@ -1026,8 +1043,9 @@
   }
 
   .industriesGrid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* 📱 2 columns on mobile (4 rows of 2) */
     gap: 1rem;
+    max-width: 600px; /* 📐 Limit width on mobile for better centering */
   }
 
   .industryCard {

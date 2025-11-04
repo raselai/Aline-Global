@@ -1,0 +1,569 @@
+/* ========================================
+   🎨 CONTACT PAGE STYLES
+   Professional purple theme
+   ======================================== */
+
+.contactPage {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ========================================
+   🎯 HERO SECTION
+   ======================================== */
+
+.heroSection {
+  /* 🎨 Purple gradient background */
+  background: radial-gradient(100vw 400px at 50% -50%, #f0a6ca55 0%, transparent 60%),
+              linear-gradient(135deg, #7c1d5d 0%, #4c1447 60%, #3a0d3a 100%);
+  padding: 6rem 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.heroContent {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.heroSubtitle {
+  font-size: 1.4rem;
+  color: #e5e7eb;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.heroDivider {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #f9c74f, #f94144);
+  margin: 0 auto 2rem auto;
+  border-radius: 9999px;
+}
+
+.heroDescription {
+  font-size: 1.1rem;
+  color: #e5e7eb;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   📞 CONTACT METHODS SECTION
+   ======================================== */
+
+.contactMethodsSection {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.methodsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.methodCard {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.methodCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(124, 29, 93, 0.15);
+  border-color: #7c1d5d;
+}
+
+.methodIcon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.methodTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.methodText {
+  font-size: 1rem;
+  color: #4a5568;
+  margin: 0.5rem 0;
+}
+
+.methodSubtext {
+  font-size: 0.9rem;
+  color: #718096;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* ========================================
+   📝 CONTACT FORM SECTION
+   ======================================== */
+
+.formSection {
+  /* 🎨 Purple gradient background */
+  background: radial-gradient(100vw 400px at 50% -50%, #f0a6ca55 0%, transparent 60%),
+              linear-gradient(135deg, #7c1d5d 0%, #4c1447 60%, #3a0d3a 100%);
+  padding: 5rem 2rem;
+  width: 100%;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.formContainer {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.formTitle {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.formSubtitle {
+  font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+.successMessage {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.form {
+  /* Styles for form container */
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.required {
+  color: #f94144;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #7c1d5d;
+  box-shadow: 0 0 0 3px rgba(124, 29, 93, 0.1);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #7c1d5d, #4c1447);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(124, 29, 93, 0.3);
+}
+
+.submitButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(124, 29, 93, 0.4);
+}
+
+/* Right Side Info */
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.infoCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.infoTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  color: #e5e7eb;
+  font-size: 1rem;
+}
+
+.infoIcon {
+  color: #f9c74f;
+  font-weight: 700;
+}
+
+.socialLinks,
+.quickLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.socialLink,
+.quickLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover,
+.quickLink:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.socialIcon {
+  font-size: 1.5rem;
+}
+
+/* ========================================
+   ❓ FAQ SECTION
+   ======================================== */
+
+.faqSection {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.sectionTitleCenter {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faqCard {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border-left: 4px solid #7c1d5d;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.faqCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(124, 29, 93, 0.1);
+}
+
+.faqQuestion {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.faqAnswer {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ========================================
+   🗺️ LOCATION SECTION
+   ======================================== */
+
+.locationSection {
+  /* 🎨 Purple gradient background */
+  background: radial-gradient(100vw 400px at 50% -50%, #f0a6ca55 0%, transparent 60%),
+              linear-gradient(135deg, #7c1d5d 0%, #4c1447 60%, #3a0d3a 100%);
+  padding: 5rem 2rem;
+  width: 100%;
+}
+
+.locationSection .sectionTitleCenter {
+  color: #ffffff;
+}
+
+.locationsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.locationCard {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.locationCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.locationIcon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.locationTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+.locationAddress {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.locationContact {
+  font-size: 0.95rem;
+  color: #7c1d5d;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* ========================================
+   📞 FINAL CTA SECTION
+   ======================================== */
+
+.ctaSection {
+  background-color: #ffffff;
+  padding: 6rem 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+.ctaText {
+  font-size: 1.2rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.ctaButton {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #7c1d5d, #4c1447);
+  color: #ffffff;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 10px 30px rgba(124, 29, 93, 0.3);
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(124, 29, 93, 0.4);
+}
+
+/* ========================================
+   📱 RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .heroTitle {
+    font-size: 2.8rem;
+  }
+
+  .methodsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .faqGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .locationsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .sectionTitle,
+  .sectionTitleCenter {
+    font-size: 2rem;
+  }
+
+  .methodsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .formContainer {
+    padding: 2rem 1.5rem;
+  }
+
+  .formTitle {
+    font-size: 1.8rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
+
+  .ctaText {
+    font-size: 1rem;
+  }
+}
