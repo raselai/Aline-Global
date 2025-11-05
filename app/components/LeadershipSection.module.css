@@ -1,7 +1,7 @@
 .leadershipSection {
-  /* 🎨 Beautiful purple gradient background - full width for all screen sizes */
-  background: radial-gradient(100vw 400px at 50% -50%, #f0a6ca55 0%, transparent 60%),
-              linear-gradient(135deg, #7c1d5d 0%, #4c1447 60%, #3a0d3a 100%);
+  /* 🎨 Warm magenta-to-purple horizontal gradient - full width for all screen sizes */
+  background: radial-gradient(100vw 400px at 50% -50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+              linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
   width: 100%; /* 📐 Ensure full width coverage */
   padding: 3rem 0 2rem 0;
   color: #fff;

@@ -13,9 +13,9 @@
    ======================================== */
 
 .heroSection {
-  /* 🎨 Purple gradient background */
-  background: radial-gradient(100vw 400px at 50% -50%, #f0a6ca55 0%, transparent 60%),
-              linear-gradient(135deg, #7c1d5d 0%, #4c1447 60%, #3a0d3a 100%);
+  /* 🎨 Warm magenta-to-purple horizontal gradient */
+  background: radial-gradient(100vw 400px at 50% -50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+              linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
   padding: 8rem 2rem 6rem 2rem;
   text-align: center;
   width: 100%;
@@ -102,11 +102,11 @@
 }
 
 .statBox {
-  background: linear-gradient(135deg, #7c1d5d 0%, #4c1447 100%);
+  background: linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
   padding: 2.5rem 1.5rem;
   border-radius: 16px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(124, 29, 93, 0.2);
+  box-shadow: 0 10px 30px rgba(196, 97, 150, 0.3);
   transition: transform 0.3s ease;
 }
 
@@ -133,9 +133,9 @@
    ======================================== */
 
 .missionVisionSection {
-  /* 🎨 Purple gradient background */
-  background: radial-gradient(100vw 400px at 50% -50%, #f0a6ca55 0%, transparent 60%),
-              linear-gradient(135deg, #7c1d5d 0%, #4c1447 60%, #3a0d3a 100%);
+  /* 🎨 Warm magenta-to-purple horizontal gradient */
+  background: radial-gradient(100vw 400px at 50% -50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+              linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
   padding: 5rem 2rem;
   width: 100%;
 }
@@ -251,9 +251,9 @@
    ======================================== */
 
 .whyChooseSection {
-  /* 🎨 Purple gradient background */
-  background: radial-gradient(100vw 400px at 50% -50%, #f0a6ca55 0%, transparent 60%),
-              linear-gradient(135deg, #7c1d5d 0%, #4c1447 60%, #3a0d3a 100%);
+  /* 🎨 Warm magenta-to-purple horizontal gradient */
+  background: radial-gradient(100vw 400px at 50% -50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+              linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
   padding: 5rem 2rem;
   width: 100%;
 }
@@ -328,7 +328,7 @@
   transform: translateX(-50%);
   width: 3px;
   height: 100%;
-  background: linear-gradient(180deg, #7c1d5d, #4c1447);
+  background: linear-gradient(180deg, #c46196, #781a56);
 }
 
 .timelineItem {
@@ -353,10 +353,10 @@
   grid-column: 2;
   width: 20px;
   height: 20px;
-  background: linear-gradient(135deg, #7c1d5d, #4c1447);
+  background: linear-gradient(135deg, #c46196, #781a56);
   border-radius: 50%;
   border: 4px solid #ffffff;
-  box-shadow: 0 0 0 4px rgba(124, 29, 93, 0.2);
+  box-shadow: 0 0 0 4px rgba(196, 97, 150, 0.3);
   z-index: 1;
 }
 
@@ -370,7 +370,7 @@
 .timelineYear {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #7c1d5d;
+  color: #c46196;
   margin-bottom: 0.75rem;
 }
 
@@ -385,9 +385,9 @@
    ======================================== */
 
 .ctaSection {
-  /* 🎨 Purple gradient background */
-  background: radial-gradient(100vw 400px at 50% -50%, #f0a6ca55 0%, transparent 60%),
-              linear-gradient(135deg, #7c1d5d 0%, #4c1447 60%, #3a0d3a 100%);
+  /* 🎨 Warm magenta-to-purple horizontal gradient */
+  background: radial-gradient(100vw 400px at 50% -50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+              linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
   padding: 6rem 2rem;
   text-align: center;
   width: 100%;

@@ -4,6 +4,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
@@ -13,9 +14,9 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContent}>
-        {/* 🏢 Company Logo/Name */}
+        {/* 🏢 Company Logo */}
         <Link href="/" className={styles.logo}>
-          <span className={styles.logoText}>Aline Global</span>
+          <img src="/Logos/Group-Logo.png" alt="Aline Global Logo" className={styles.logoImage} />
         </Link>
 
         {/* 🍔 Hamburger Menu Button (Mobile) */}

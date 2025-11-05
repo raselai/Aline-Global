@@ -242,6 +242,93 @@ export default function Home() {
           </div>
         </section>
 
+        {/* 🌍 GLOBAL PRESENCE SECTION */}
+        <section className={styles.globalPresenceSection}>
+          <div className={styles.globalPresenceContainer}>
+            {/* Left Side - Text Content */}
+            <div className={styles.globalPresenceLeft}>
+              <h2 className={styles.globalPresenceTitle}>GLOBAL PRESENCE</h2>
+
+              <div className={styles.globalStats}>
+                <div className={styles.globalStatItem}>
+                  <div className={styles.globalStatNumber}>35+</div>
+                  <div className={styles.globalStatLabel}>Countries</div>
+                </div>
+
+                <div className={styles.globalStatItem}>
+                  <div className={styles.globalStatNumber}>120+</div>
+                  <div className={styles.globalStatLabel}>Offices Worldwide</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - World Map */}
+            <div className={styles.globalPresenceRight}>
+              <div className={styles.mapContainer}>
+                <img src="/map.png" alt="World Map" className={styles.worldMapImage} />
+
+                {/* 35 Location Pins distributed across the world */}
+                {/* North America - 8 pins */}
+                <div className={styles.mapPin} style={{left: '15%', top: '35%'}}><div className={styles.pinPulse}></div></div> {/* Vancouver */}
+                <div className={styles.mapPin} style={{left: '18%', top: '40%'}}><div className={styles.pinPulse}></div></div> {/* Seattle */}
+                <div className={styles.mapPin} style={{left: '21%', top: '38%'}}><div className={styles.pinPulse}></div></div> {/* New York */}
+                <div className={styles.mapPin} style={{left: '19%', top: '42%'}}><div className={styles.pinPulse}></div></div> {/* Chicago */}
+                <div className={styles.mapPin} style={{left: '17%', top: '46%'}}><div className={styles.pinPulse}></div></div> {/* Los Angeles */}
+                <div className={styles.mapPin} style={{left: '21%', top: '48%'}}><div className={styles.pinPulse}></div></div> {/* Houston */}
+                <div className={styles.mapPin} style={{left: '23%', top: '50%'}}><div className={styles.pinPulse}></div></div> {/* Miami */}
+                <div className={styles.mapPin} style={{left: '20%', top: '54%'}}><div className={styles.pinPulse}></div></div> {/* Mexico City */}
+
+                {/* South America - 4 pins */}
+                <div className={styles.mapPin} style={{left: '28%', top: '62%'}}><div className={styles.pinPulse}></div></div> {/* Bogotá */}
+                <div className={styles.mapPin} style={{left: '32%', top: '68%'}}><div className={styles.pinPulse}></div></div> {/* São Paulo */}
+                <div className={styles.mapPin} style={{left: '33%', top: '66%'}}><div className={styles.pinPulse}></div></div> {/* Rio */}
+                <div className={styles.mapPin} style={{left: '30%', top: '75%'}}><div className={styles.pinPulse}></div></div> {/* Buenos Aires */}
+
+                {/* Europe - 10 pins */}
+                <div className={styles.mapPin} style={{left: '48%', top: '32%'}}><div className={styles.pinPulse}></div></div> {/* London */}
+                <div className={styles.mapPin} style={{left: '49%', top: '34%'}}><div className={styles.pinPulse}></div></div> {/* Paris */}
+                <div className={styles.mapPin} style={{left: '50%', top: '33%'}}><div className={styles.pinPulse}></div></div> {/* Amsterdam */}
+                <div className={styles.mapPin} style={{left: '51%', top: '32%'}}><div className={styles.pinPulse}></div></div> {/* Berlin */}
+                <div className={styles.mapPin} style={{left: '52%', top: '34%'}}><div className={styles.pinPulse}></div></div> {/* Munich */}
+                <div className={styles.mapPin} style={{left: '53%', top: '31%'}}><div className={styles.pinPulse}></div></div> {/* Warsaw */}
+                <div className={styles.mapPin} style={{left: '47%', top: '38%'}}><div className={styles.pinPulse}></div></div> {/* Madrid */}
+                <div className={styles.mapPin} style={{left: '49%', top: '39%'}}><div className={styles.pinPulse}></div></div> {/* Barcelona */}
+                <div className={styles.mapPin} style={{left: '51%', top: '38%'}}><div className={styles.pinPulse}></div></div> {/* Rome */}
+                <div className={styles.mapPin} style={{left: '58%', top: '28%'}}><div className={styles.pinPulse}></div></div> {/* Moscow */}
+
+                {/* Africa - 5 pins */}
+                <div className={styles.mapPin} style={{left: '52%', top: '48%'}}><div className={styles.pinPulse}></div></div> {/* Cairo */}
+                <div className={styles.mapPin} style={{left: '48%', top: '55%'}}><div className={styles.pinPulse}></div></div> {/* Lagos */}
+                <div className={styles.mapPin} style={{left: '54%', top: '58%'}}><div className={styles.pinPulse}></div></div> {/* Nairobi */}
+                <div className={styles.mapPin} style={{left: '51%', top: '74%'}}><div className={styles.pinPulse}></div></div> {/* Johannesburg */}
+                <div className={styles.mapPin} style={{left: '50%', top: '78%'}}><div className={styles.pinPulse}></div></div> {/* Cape Town */}
+
+                {/* Middle East - 3 pins */}
+                <div className={styles.mapPin} style={{left: '56%', top: '45%'}}><div className={styles.pinPulse}></div></div> {/* Dubai */}
+                <div className={styles.mapPin} style={{left: '57%', top: '47%'}}><div className={styles.pinPulse}></div></div> {/* Riyadh */}
+                <div className={styles.mapPin} style={{left: '59%', top: '44%'}}><div className={styles.pinPulse}></div></div> {/* Tehran */}
+
+                {/* Asia - 10 pins */}
+                <div className={styles.mapPin} style={{left: '62%', top: '38%'}}><div className={styles.pinPulse}></div></div> {/* Delhi */}
+                <div className={styles.mapPin} style={{left: '61%', top: '42%'}}><div className={styles.pinPulse}></div></div> {/* Mumbai */}
+                <div className={styles.mapPin} style={{left: '65%', top: '44%'}}><div className={styles.pinPulse}></div></div> {/* Bangalore */}
+                <div className={styles.mapPin} style={{left: '70%', top: '32%'}}><div className={styles.pinPulse}></div></div> {/* Beijing */}
+                <div className={styles.mapPin} style={{left: '72%', top: '36%'}}><div className={styles.pinPulse}></div></div> {/* Shanghai */}
+                <div className={styles.mapPin} style={{left: '71%', top: '45%'}}><div className={styles.pinPulse}></div></div> {/* Hong Kong */}
+                <div className={styles.mapPin} style={{left: '78%', top: '38%'}}><div className={styles.pinPulse}></div></div> {/* Tokyo */}
+                <div className={styles.mapPin} style={{left: '77%', top: '42%'}}><div className={styles.pinPulse}></div></div> {/* Osaka */}
+                <div className={styles.mapPin} style={{left: '68%', top: '52%'}}><div className={styles.pinPulse}></div></div> {/* Singapore */}
+                <div className={styles.mapPin} style={{left: '75%', top: '48%'}}><div className={styles.pinPulse}></div></div> {/* Manila */}
+
+                {/* Oceania - 3 pins */}
+                <div className={styles.mapPin} style={{left: '83%', top: '73%'}}><div className={styles.pinPulse}></div></div> {/* Sydney */}
+                <div className={styles.mapPin} style={{left: '82%', top: '75%'}}><div className={styles.pinPulse}></div></div> {/* Melbourne */}
+                <div className={styles.mapPin} style={{left: '88%', top: '78%'}}><div className={styles.pinPulse}></div></div> {/* Auckland */}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* 🏢 SUBSIDIARY COMPANIES SECTION */}
         <section className={styles.subsidiarySection}>
           <div className={styles.sectionHeader}>
@@ -252,25 +339,57 @@ export default function Home() {
           {/* Logo Slider - Animates from right to left */}
           <div className={styles.logoSlider}>
             <div className={styles.logoTrack}>
-              {/* Placeholder logo boxes - replace with actual logo images */}
-              <div className={styles.logoBox}>Company Logo 1</div>
-              <div className={styles.logoBox}>Company Logo 2</div>
-              <div className={styles.logoBox}>Company Logo 3</div>
-              <div className={styles.logoBox}>Company Logo 4</div>
-              <div className={styles.logoBox}>Company Logo 5</div>
-              <div className={styles.logoBox}>Company Logo 6</div>
-              <div className={styles.logoBox}>Company Logo 7</div>
-              <div className={styles.logoBox}>Company Logo 8</div>
+              {/* Subsidiary Company Logos */}
+              <div className={styles.logoBox}>
+                <img src="/Logos/1-Logo_Garments-&-Apparel.png" alt="Garments & Apparel" className={styles.logoImage} />
+              </div>
+              <div className={styles.logoBox}>
+                <img src="/Logos/1-Logo_Manufacture.png" alt="Manufacture" className={styles.logoImage} />
+              </div>
+              <div className={styles.logoBox}>
+                <img src="/Logos/Aline_Ad_markeintg.png" alt="Ad & Marketing" className={styles.logoImage} />
+              </div>
+              <div className={styles.logoBox}>
+                <img src="/Logos/Aline-Pharmaceutical-Co.-Ltd..png" alt="Pharmaceutical" className={styles.logoImage} />
+              </div>
+              <div className={styles.logoBox}>
+                <img src="/Logos/International_trade.png" alt="International Trade" className={styles.logoImage} />
+              </div>
+              <div className={styles.logoBox}>
+                <img src="/Logos/Logo_IT.png" alt="IT" className={styles.logoImage} />
+              </div>
+              <div className={styles.logoBox}>
+                <img src="/Logos/Logo_Real_estate.png" alt="Real Estate" className={styles.logoImage} />
+              </div>
+              <div className={styles.logoBox}>
+                <img src="/Logos/Media-&-TV-Channel.png" alt="Media & TV Channel" className={styles.logoImage} />
+              </div>
 
               {/* Duplicate for seamless loop */}
-              <div className={styles.logoBox}>Company Logo 1</div>
-              <div className={styles.logoBox}>Company Logo 2</div>
-              <div className={styles.logoBox}>Company Logo 3</div>
-              <div className={styles.logoBox}>Company Logo 4</div>
-              <div className={styles.logoBox}>Company Logo 5</div>
-              <div className={styles.logoBox}>Company Logo 6</div>
-              <div className={styles.logoBox}>Company Logo 7</div>
-              <div className={styles.logoBox}>Company Logo 8</div>
+              <div className={styles.logoBox}>
+                <img src="/Logos/1-Logo_Garments-&-Apparel.png" alt="Garments & Apparel" className={styles.logoImage} />
+              </div>
+              <div className={styles.logoBox}>
+                <img src="/Logos/1-Logo_Manufacture.png" alt="Manufacture" className={styles.logoImage} />
+              </div>
+              <div className={styles.logoBox}>
+                <img src="/Logos/Aline_Ad_markeintg.png" alt="Ad & Marketing" className={styles.logoImage} />
+              </div>
+              <div className={styles.logoBox}>
+                <img src="/Logos/Aline-Pharmaceutical-Co.-Ltd..png" alt="Pharmaceutical" className={styles.logoImage} />
+              </div>
+              <div className={styles.logoBox}>
+                <img src="/Logos/International_trade.png" alt="International Trade" className={styles.logoImage} />
+              </div>
+              <div className={styles.logoBox}>
+                <img src="/Logos/Logo_IT.png" alt="IT" className={styles.logoImage} />
+              </div>
+              <div className={styles.logoBox}>
+                <img src="/Logos/Logo_Real_estate.png" alt="Real Estate" className={styles.logoImage} />
+              </div>
+              <div className={styles.logoBox}>
+                <img src="/Logos/Media-&-TV-Channel.png" alt="Media & TV Channel" className={styles.logoImage} />
+              </div>
             </div>
           </div>
         </section>

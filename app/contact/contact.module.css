@@ -13,9 +13,9 @@
    ======================================== */
 
 .heroSection {
-  /* 🎨 Purple gradient background */
-  background: radial-gradient(100vw 400px at 50% -50%, #f0a6ca55 0%, transparent 60%),
-              linear-gradient(135deg, #7c1d5d 0%, #4c1447 60%, #3a0d3a 100%);
+  /* 🎨 Warm magenta-to-purple horizontal gradient */
+  background: radial-gradient(100vw 400px at 50% -50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+              linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
   padding: 6rem 2rem;
   text-align: center;
   width: 100%;
@@ -101,8 +101,8 @@
 
 .methodCard:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(124, 29, 93, 0.15);
-  border-color: #7c1d5d;
+  box-shadow: 0 15px 40px rgba(196, 97, 150, 0.2);
+  border-color: #c46196;
 }
 
 .methodIcon {
@@ -135,9 +135,9 @@
    ======================================== */
 
 .formSection {
-  /* 🎨 Purple gradient background */
-  background: radial-gradient(100vw 400px at 50% -50%, #f0a6ca55 0%, transparent 60%),
-              linear-gradient(135deg, #7c1d5d 0%, #4c1447 60%, #3a0d3a 100%);
+  /* 🎨 Warm magenta-to-purple horizontal gradient */
+  background: radial-gradient(100vw 400px at 50% -50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+              linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
   padding: 5rem 2rem;
   width: 100%;
 }
@@ -223,8 +223,8 @@
 .select:focus,
 .textarea:focus {
   outline: none;
-  border-color: #7c1d5d;
-  box-shadow: 0 0 0 3px rgba(124, 29, 93, 0.1);
+  border-color: #c46196;
+  box-shadow: 0 0 0 3px rgba(196, 97, 150, 0.15);
 }
 
 .textarea {
@@ -235,7 +235,7 @@
 .submitButton {
   width: 100%;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #7c1d5d, #4c1447);
+  background: linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
   color: #ffffff;
   font-size: 1.1rem;
   font-weight: 600;
@@ -243,12 +243,12 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 30px rgba(124, 29, 93, 0.3);
+  box-shadow: 0 10px 30px rgba(196, 97, 150, 0.3);
 }
 
 .submitButton:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(124, 29, 93, 0.4);
+  box-shadow: 0 15px 40px rgba(196, 97, 150, 0.4);
 }
 
 /* Right Side Info */
@@ -353,7 +353,7 @@
 
 .faqCard {
   background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-  border-left: 4px solid #7c1d5d;
+  border-left: 4px solid #c46196;
   border-radius: 12px;
   padding: 2rem;
   transition: all 0.3s ease;
@@ -361,7 +361,7 @@
 
 .faqCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(124, 29, 93, 0.1);
+  box-shadow: 0 10px 30px rgba(196, 97, 150, 0.15);
 }
 
 .faqQuestion {
@@ -383,9 +383,9 @@
    ======================================== */
 
 .locationSection {
-  /* 🎨 Purple gradient background */
-  background: radial-gradient(100vw 400px at 50% -50%, #f0a6ca55 0%, transparent 60%),
-              linear-gradient(135deg, #7c1d5d 0%, #4c1447 60%, #3a0d3a 100%);
+  /* 🎨 Warm magenta-to-purple horizontal gradient */
+  background: radial-gradient(100vw 400px at 50% -50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+              linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
   padding: 5rem 2rem;
   width: 100%;
 }
@@ -437,7 +437,7 @@
 
 .locationContact {
   font-size: 0.95rem;
-  color: #7c1d5d;
+  color: #c46196;
   font-weight: 600;
   line-height: 1.7;
 }
@@ -474,7 +474,7 @@
 
 .ctaButton {
   padding: 1rem 2.5rem;
-  background: linear-gradient(135deg, #7c1d5d, #4c1447);
+  background: linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
   color: #ffffff;
   border-radius: 50px;
   font-size: 1.1rem;
@@ -482,12 +482,12 @@
   text-decoration: none;
   transition: all 0.3s ease;
   display: inline-block;
-  box-shadow: 0 10px 30px rgba(124, 29, 93, 0.3);
+  box-shadow: 0 10px 30px rgba(196, 97, 150, 0.3);
 }
 
 .ctaButton:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(124, 29, 93, 0.4);
+  box-shadow: 0 15px 40px rgba(196, 97, 150, 0.4);
 }
 
 /* ========================================
