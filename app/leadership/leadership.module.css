@@ -1,0 +1,520 @@
+/* ========================================
+   👥 LEADERSHIP PAGE STYLES
+   Professional design matching site theme
+   ======================================== */
+
+.leadershipPage {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* ========================================
+   🎯 HERO SECTION
+   Purple gradient matching other pages
+   ======================================== */
+
+.heroSection {
+  /* 🎨 Warm magenta-to-purple horizontal gradient */
+  background: radial-gradient(100vw 400px at 50% -50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+              linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
+  padding: 8rem 2rem 6rem 2rem;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.heroContent {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  color: #e5e7eb;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.heroDivider {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #f9c74f, #f94144);
+  margin: 0 auto;
+  border-radius: 9999px;
+}
+
+/* ========================================
+   📖 INTRODUCTION SECTION
+   ======================================== */
+
+.introSection {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.introContent {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.introParagraph {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.introParagraph strong {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+/* ========================================
+   👥 LEADERSHIP TEAM CARDS SECTION
+   ======================================== */
+
+.teamSection {
+  padding: 5rem 2rem;
+  /* 🎨 Warm magenta-to-purple horizontal gradient */
+  background: radial-gradient(100vw 400px at 50% -50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+              linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
+  width: 100%;
+}
+
+.leadershipGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   🎴 INDIVIDUAL LEADER CARD
+   ======================================== */
+
+.leaderCard {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 0;
+}
+
+.leaderCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* 📸 Photo Section - Left Side */
+.photoSection {
+  background: linear-gradient(135deg, #5c2547 0%, #8b3a62 100%);
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photoCircle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  background: linear-gradient(135deg, #f0f0f0 0%, #d0d0d0 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.leaderCard:hover .photoCircle {
+  transform: scale(1.05);
+  border-color: rgba(249, 199, 79, 0.8);
+}
+
+.photoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.photoPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #cbd5e1);
+}
+
+.placeholderIcon {
+  width: 80px;
+  height: 80px;
+  fill: #334155;
+}
+
+/* 📝 Content Section - Right Side */
+.contentSection {
+  padding: 3rem 3rem 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.leaderName {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.5px;
+}
+
+.leaderRole {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #c46196; /* 🎨 Purple/pink matching gradient */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 1.5rem 0;
+}
+
+.shortBio {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin: 0 0 1rem 0;
+}
+
+/* 📖 Expandable Full Bio */
+.fullBioContainer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.fullBioContainer.expanded {
+  max-height: 500px;
+  margin-bottom: 1rem;
+}
+
+.fullBio {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(74, 85, 104, 0.2);
+  margin: 0;
+}
+
+/* 🔘 Read More Button */
+.readMoreBtn {
+  align-self: flex-start;
+  background: transparent;
+  color: #c46196;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.readMoreBtn:hover {
+  color: #8b3a62;
+  transform: translateX(5px);
+}
+
+/* 📧 Contact Info */
+.contactInfo {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(74, 85, 104, 0.1);
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4a5568;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contactLink:hover {
+  color: #c46196;
+  transform: translateY(-2px);
+}
+
+.contactIcon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* ========================================
+   💼 CORPORATE GOVERNANCE SECTION
+   ======================================== */
+
+.governanceSection {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.sectionTitleCenter {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.governanceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.governanceCard {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.governanceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.governanceIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.governanceTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.governanceText {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ========================================
+   📞 CTA SECTION
+   ======================================== */
+
+.ctaSection {
+  padding: 6rem 2rem;
+  /* 🎨 Warm magenta-to-purple horizontal gradient */
+  background: radial-gradient(100vw 400px at 50% -50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+              linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
+  width: 100%;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.ctaText {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: #ffffff;
+  color: #8b3a62;
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButton:hover {
+  background: #f9c74f;
+  color: #2d3748;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   📱 RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .leaderCard {
+    grid-template-columns: 250px 1fr;
+  }
+
+  .photoCircle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .leaderName {
+    font-size: 1.7rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 6rem 1.5rem 4rem 1.5rem;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .introSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .introParagraph {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .teamSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .leadershipGrid {
+    gap: 2rem;
+  }
+
+  /* Stack photo above content on mobile */
+  .leaderCard {
+    grid-template-columns: 1fr;
+  }
+
+  .photoSection {
+    padding: 2rem;
+  }
+
+  .photoCircle {
+    width: 160px;
+    height: 160px;
+  }
+
+  .contentSection {
+    padding: 2rem 1.5rem;
+  }
+
+  .leaderName {
+    font-size: 1.5rem;
+  }
+
+  .leaderRole {
+    font-size: 0.9rem;
+  }
+
+  .shortBio {
+    font-size: 1rem;
+  }
+
+  .contactInfo {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .governanceSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .sectionTitleCenter {
+    font-size: 2rem;
+  }
+
+  .governanceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
+
+  .ctaText {
+    font-size: 1rem;
+  }
+
+  .ctaButton {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+}

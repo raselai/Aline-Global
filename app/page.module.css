@@ -647,9 +647,18 @@
   z-index: 1;
 }
 
-/* 📝 MD Message Content */
-.mdContent {
+/* 📐 Wrapper for message + photo (side by side on desktop) */
+.mdContentWrapper {
+  display: flex;
+  align-items: flex-start; /* Align items to top */
+  gap: 3rem; /* Space between message and photo */
   margin-bottom: 4rem;
+}
+
+/* 📝 MD Message Content - Left Side */
+.mdContent {
+  flex: 1; /* Take up available space */
+  min-width: 0; /* Prevent flex overflow */
 }
 
 .mdTitle {
@@ -706,6 +715,93 @@
 
 .mdSignature p {
   margin: 0;
+}
+
+/* ========================================
+   📸 DIRECTOR'S PHOTO - Right Side
+   ======================================== */
+
+/* 🖼️ Photo Container - Right Side */
+.mdPhotoContainer {
+  flex: 0 0 350px; /* Fixed width, doesn't grow or shrink */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* 🖼️ Photo Frame - Elegant border and shadow */
+.mdPhotoFrame {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 3/4; /* Professional portrait ratio */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+}
+
+.mdPhotoFrame:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+/* 📷 The actual photo */
+.mdPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* Focus on face area */
+  border-radius: 12px;
+  display: block;
+}
+
+/* ✨ Decorative Corner Accents - Golden/Brand Color */
+.photoCornerTL,
+.photoCornerTR,
+.photoCornerBL,
+.photoCornerBR {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(249, 199, 79, 0.8); /* Golden accent */
+}
+
+/* Top-Left Corner */
+.photoCornerTL {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+  border-top-left-radius: 20px;
+}
+
+/* Top-Right Corner */
+.photoCornerTR {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+  border-top-right-radius: 20px;
+}
+
+/* Bottom-Left Corner */
+.photoCornerBL {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+  border-bottom-left-radius: 20px;
+}
+
+/* Bottom-Right Corner */
+.photoCornerBR {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+  border-bottom-right-radius: 20px;
 }
 
 /* 📊 Statistics Container */
@@ -1129,6 +1225,15 @@
     grid-template-columns: repeat(3, 1fr); /* 📱 3 columns on tablet */
     max-width: 900px; /* 📐 Limit width on tablet */
   }
+
+  /* 📱 MD Section - Adjust photo size on tablets */
+  .mdPhotoContainer {
+    flex: 0 0 280px; /* Slightly smaller photo on tablets */
+  }
+
+  .mdContentWrapper {
+    gap: 2rem; /* Smaller gap on tablets */
+  }
 }
 
 @media (max-width: 768px) {
@@ -1357,6 +1462,24 @@
   .mdTitle {
     font-size: 1.8rem;
     margin-bottom: 2rem;
+  }
+
+  /* 📱 Stack message and photo vertically on mobile */
+  .mdContentWrapper {
+    flex-direction: column; /* Stack vertically */
+    gap: 2rem;
+  }
+
+  /* 📱 Photo takes full width on mobile */
+  .mdPhotoContainer {
+    flex: 1 1 auto; /* Allow to grow */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Limit max width */
+    margin: 0 auto; /* Center the photo */
+  }
+
+  .mdPhotoFrame {
+    max-width: 100%; /* Full width of container */
   }
 
   .mdMessage {

@@ -51,7 +51,7 @@ export default function Navbar() {
             </ul>
           </li>
 
-          <li><a href="#leadership">Leadership</a></li>
+          <li><Link href="/leadership">Leadership</Link></li>
           <li><Link href="/contact">Contact</Link></li>
         </ul>
       </div>

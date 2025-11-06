@@ -207,19 +207,39 @@ export default function Home() {
         {/* 💼 MANAGING DIRECTOR'S MESSAGE SECTION */}
         <section className={styles.mdSection}>
           <div className={styles.mdContainer}>
-            {/* MD Message Content */}
-            <div className={styles.mdContent}>
-              <h2 className={styles.mdTitle}>Managing Director's Message</h2>
+            {/* Section Title - Above everything */}
+            <h2 className={styles.mdTitle}>Managing Director's Message</h2>
 
-              <div className={styles.mdMessage}>
-                <p className={styles.mdText}>
-                  Over the years, Aline Global Ltd has evolved into a diversified multinational enterprise with a strong presence across multiple sectors and global markets. Our journey has been defined by innovation, integrity, and sustainable growth — transforming challenges into opportunities and ideas into impactful realities.
-                </p>
-                <p className={styles.mdText}>
-                  We take pride in building businesses that are leaders in their respective industries — from manufacturing and technology to healthcare, real estate, media, and international trade. Our vision is clear: to be a dynamic global conglomerate driven by excellence, collaboration, and innovation for a smarter, more sustainable future.
-                </p>
-                <div className={styles.mdSignature}>
-                  <p>— MD, Aline Global Ltd</p>
+            {/* 📐 Flexbox container for message (left) and photo (right) */}
+            <div className={styles.mdContentWrapper}>
+              {/* Left Side - MD Message Content */}
+              <div className={styles.mdContent}>
+                <div className={styles.mdMessage}>
+                  <p className={styles.mdText}>
+                    Over the years, Aline Global Ltd has evolved into a diversified multinational enterprise with a strong presence across multiple sectors and global markets. Our journey has been defined by innovation, integrity, and sustainable growth — transforming challenges into opportunities and ideas into impactful realities.
+                  </p>
+                  <p className={styles.mdText}>
+                    We take pride in building businesses that are leaders in their respective industries — from manufacturing and technology to healthcare, real estate, media, and international trade. Our vision is clear: to be a dynamic global conglomerate driven by excellence, collaboration, and innovation for a smarter, more sustainable future.
+                  </p>
+                  <div className={styles.mdSignature}>
+                    <p>— MD, Aline Global Ltd</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Side - Director's Photo */}
+              <div className={styles.mdPhotoContainer}>
+                <div className={styles.mdPhotoFrame}>
+                  <img
+                    src="/Team/Director.jpg"
+                    alt="Managing Director"
+                    className={styles.mdPhoto}
+                  />
+                  {/* ✨ Decorative corner accents */}
+                  <div className={styles.photoCornerTL}></div>
+                  <div className={styles.photoCornerTR}></div>
+                  <div className={styles.photoCornerBL}></div>
+                  <div className={styles.photoCornerBR}></div>
                 </div>
               </div>
             </div>

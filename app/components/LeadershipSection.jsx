@@ -2,48 +2,42 @@
 
 import styles from './LeadershipSection.module.css'
 
+// 👥 LEADERSHIP TEAM DATA
+// 📝 Real team members of Aline Global Ltd
 const leaders = [
   {
-    name: 'Dr Sanjiv Goenka',
-    role: 'Chairman',
+    name: 'Md. Mamunar Rashid',
+    role: 'Managing Director & Chief Executive',
     blurb:
-      "Dr. Sanjiv Goenka is the Chairman of RP-Sanjiv Goenka Group. He has been ranked among India's most powerful business leaders.",
+      'Leading Aline Global Ltd with a vision of innovation, integrity, and sustainable growth across multiple sectors and global markets.',
+    image: '/Team/Director.jpg', // 🖼️ Photo available
   },
   {
-    name: 'Shashwat Goenka',
-    role: 'Vice Chairman',
+    name: 'Syed M A Jinnah',
+    role: 'Director of Media Wing',
     blurb:
-      "Mr. Shashwat Goenka is the Vice Chairman of the RP-Sanjiv Goenka Group and serves on multiple boards across the group.",
+      'Overseeing media operations and communications strategy, building powerful brand narratives and broadcasting excellence.',
+    image: null, // 🖼️ Photo to be added later
   },
   {
-    name: 'Rajarshi Banerjee',
-    role: 'Group Chief Financial Officer',
+    name: 'Md. Waheduzzaman',
+    role: 'Director of Global Collaboration',
     blurb:
-      'Rajarshi leads group finance and strategy, ensuring robust governance and sustainable growth across businesses.',
+      'Driving international partnerships and strategic collaborations to expand Aline Global\'s presence across continents.',
+    image: null, // 🖼️ Photo to be added later
   },
   {
-    name: 'Prateek Aggarwal',
-    role: 'President - Value Creation',
+    name: 'Md Apu Molla',
+    role: 'Director of Finance',
     blurb:
-      'Prateek drives value creation initiatives and high-impact programs across the portfolio.',
-  },
-  {
-    name: 'Dilip Pattanayak',
-    role: 'President - Group HR',
-    blurb:
-      'Dilip oversees people strategy, talent development and organizational excellence across the group.',
-  },
-  {
-    name: 'Abhishek Malhotra',
-    role: 'President - Strategy',
-    blurb:
-      'Abhishek focuses on group strategy and business transformation to unlock long-term growth.',
+      'Managing financial strategy, governance, and sustainable growth initiatives across all business sectors.',
+    image: null, // 🖼️ Photo to be added later
   },
 ]
 
 export default function LeadershipSection() {
   return (
-    <section className={styles.leadershipSection} aria-labelledby="leadership-title">
+    <section className={styles.leadershipSection} id="leadership" aria-labelledby="leadership-title">
       <div className={styles.sectionHeader}>
         <h2 id="leadership-title" className={styles.title}>Leadership</h2>
         <div className={styles.divider}></div>
@@ -52,32 +46,42 @@ export default function LeadershipSection() {
       <div className={styles.grid}>
         {leaders.map((leader, index) => (
           <article key={leader.name + index} className={styles.card}>
-            <div className={styles.avatar} aria-hidden="true">
-              {/* Person icon placeholder */}
-              <svg viewBox="0 0 24 24" className={styles.avatarIcon}>
-                <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5z" />
-              </svg>
+            {/* 🖼️ Circular Photo */}
+            <div className={styles.photoCircle}>
+              {leader.image ? (
+                // ✅ Show real photo if available
+                <img
+                  src={leader.image}
+                  alt={leader.name}
+                  className={styles.photoImage}
+                />
+              ) : (
+                // 📦 Show placeholder icon if no photo yet
+                <div className={styles.photoPlaceholder}>
+                  <svg viewBox="0 0 24 24" className={styles.placeholderIcon}>
+                    <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5z" />
+                  </svg>
+                </div>
+              )}
             </div>
 
-            <header className={styles.cardHeader}>
-              <h3 className={styles.name}>{leader.name}</h3>
-              <span className={styles.role}>{leader.role}</span>
-            </header>
+            {/* 📝 Name and Role */}
+            <div className={styles.cardContent}>
+              <h3 className={styles.leaderName}>{leader.name}</h3>
+              <p className={styles.leaderRole}>{leader.role}</p>
+              <p className={styles.leaderCompany}>ALINE GLOBAL LTD</p>
+            </div>
 
-            <p className={styles.blurb}>{leader.blurb}</p>
-
-            <div className={styles.cardFooter}>
-              <button type="button" className={styles.cta} aria-label={`Know more about ${leader.name}`}>
-                <span className={styles.ctaIcon}>◉</span>
+            {/* 📖 Description (hidden by default, shows on hover/expand) */}
+            <div className={styles.cardDescription}>
+              <p className={styles.descriptionText}>{leader.blurb}</p>
+              <button type="button" className={styles.knowMoreBtn}>
+                <span className={styles.btnIcon}>⊙</span>
                 Know More
               </button>
             </div>
           </article>
         ))}
-      </div>
-
-      <div className={styles.bottomCtaWrap}>
-        <button type="button" className={styles.bottomCta}>Know More</button>
       </div>
     </section>
   )
