@@ -1,0 +1,283 @@
+/* ========================================
+   🧭 NAVIGATION BAR COMPONENT STYLES
+   Reusable navbar for all pages
+   ======================================== */
+
+.navbar {
+  /* 🎨 Professional gray gradient */
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+
+  /* 📍 Fixed positioning - stays at top always when scrolling */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  /* ✨ Enhanced shadow for depth */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+  /* 📦 Full width */
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.navContent {
+  max-width: 1400px; /* Maximum width of content */
+  margin: 0 auto; /* Center the content */
+  padding: 0 2rem;
+  display: flex; /* Flexbox for layout */
+  justify-content: flex-start; /* 📍 Align logo and menu to the left */
+  align-items: center; /* Vertically center items */
+  gap: 3rem; /* 📏 Space between logo and menu items */
+  position: relative; /* 📱 Needed for mobile menu positioning */
+  flex-wrap: wrap; /* 📱 Allow menu to wrap to next line on mobile */
+}
+
+/* ========================================
+   🏢 LOGO STYLES
+   ======================================== */
+
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  color: #ffffff; /* White text on dark background */
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 1px;
+  /* ✨ Subtle glow effect for elegance */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logoImage {
+  height: 50px; /* Fixed height for navbar */
+  width: auto; /* Maintain aspect ratio */
+  max-width: 200px; /* Maximum width */
+  object-fit: contain; /* Keep logo proportions */
+  filter: brightness(1.1); /* Slightly brighter on dark background */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo:hover .logoImage {
+  transform: scale(1.05); /* Slight zoom on hover */
+  filter: brightness(1.2); /* Brighter on hover */
+}
+
+/* ========================================
+   🍔 HAMBURGER MENU (Mobile)
+   ======================================== */
+
+.hamburger {
+  display: none;
+  background: none; /* Remove default button background */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Show pointer on hover */
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 4px 0;
+}
+
+/* ========================================
+   📖 NAVIGATION MENU
+   ======================================== */
+
+.navMenu {
+  list-style: none; /* Remove bullet points */
+  display: flex;
+  gap: 2rem; /* Space between menu items */
+  margin: 0;
+  padding: 0;
+}
+
+.navMenu li a {
+  color: rgba(255, 255, 255, 0.9); /* White text with slight transparency */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500;
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.navMenu li a:hover {
+  color: #cbd5e0; /* Light gray on hover - matches theme */
+  /* ✨ Subtle glow effect on hover for elegance */
+  text-shadow: 0 0 10px rgba(203, 213, 224, 0.6);
+}
+
+/* ========================================
+   📖 DROPDOWN MENU STYLES
+   ======================================== */
+
+.dropdown {
+  position: relative; /* Allows absolute positioning of submenu */
+}
+
+.dropdownMenu {
+  /* Hide the menu by default */
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the parent menu item */
+  left: 50%; /* 📍 Start from center */
+  transform: translateX(-50%) translateY(-10px); /* 📍 Center horizontally */
+
+  /* 🎨 Elegant styling to match navbar */
+  background-color: #ffffff;
+  min-width: 800px; /* 📏 Wider for horizontal layout with 8 items */
+  max-width: 90vw; /* 📱 Don't exceed viewport width */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  border-radius: 8px; /* Rounded corners to match navbar */
+  border-top: 3px solid #4a5568; /* Gray accent line */
+  padding: 1rem; /* 📦 More padding */
+
+  list-style: none;
+  margin: 0;
+  z-index: 100;
+
+  /* 🎬 Smooth animation */
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none; /* Prevent interaction when hidden */
+
+  /* 📐 Horizontal layout for dropdown items */
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+  gap: 0.5rem;
+}
+
+.dropdown:hover .dropdownMenu {
+  display: flex; /* 📐 Show as flex for horizontal layout */
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* 📍 Slide down */
+  pointer-events: auto; /* Enable interaction */
+}
+
+.dropdownMenu li {
+  flex: 0 0 calc(25% - 0.5rem); /* 📐 4 items per row with gap */
+  min-width: 180px; /* Minimum width for each item */
+}
+
+.dropdownMenu li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #2d3748;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-align: center; /* Center text in dropdown items */
+}
+
+.dropdownMenu li a:hover {
+  background-color: #f7fafc;
+  color: #4a5568;
+  transform: translateX(5px);
+}
+
+/* ========================================
+   📱 RESPONSIVE DESIGN - Mobile
+   ======================================== */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.75rem 0;
+  }
+
+  .navContent {
+    justify-content: space-between; /* Logo left, hamburger right */
+    gap: 0;
+    padding: 0 1.5rem;
+  }
+
+  /* Smaller logo on mobile */
+  .logoImage {
+    height: 40px; /* Smaller height for mobile */
+    max-width: 150px; /* Smaller max width for mobile */
+  }
+
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    z-index: 1001;
+  }
+
+  /* Hide menu by default on mobile */
+  .navMenu {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack menu items vertically */
+    gap: 0.5rem;
+    width: 100%; /* Full width on mobile */
+    text-align: center; /* Center the text */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+    padding: 1rem 0;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Show menu when active */
+  .navMenuActive {
+    display: flex;
+  }
+
+  /* Dropdown adjustments for mobile */
+  .dropdown {
+    width: 100%; /* Full width */
+  }
+
+  .dropdownMenu {
+    position: static; /* Remove absolute positioning on mobile */
+    min-width: 100%; /* Full width */
+    box-shadow: none; /* Remove shadow */
+    border-left: 3px solid #4a5568; /* Gray accent line */
+    border-top: none;
+    background-color: #f9f9f9; /* Slightly different background */
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    /* 📱 Keep vertical layout on mobile */
+    flex-direction: column; /* Stack vertically on mobile */
+    padding: 0.5rem 0; /* Adjust padding for mobile */
+  }
+
+  .dropdown:hover .dropdownMenu {
+    display: flex;
+  }
+
+  /* 📱 Mobile dropdown items - full width */
+  .dropdownMenu li {
+    width: 100%; /* Full width on mobile */
+    min-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .dropdownMenu li a {
+    text-align: left;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navMenu {
+    gap: 1.5rem; /* Smaller gap on tablets */
+  }
+
+  .navContent {
+    gap: 2rem;
+  }
+}

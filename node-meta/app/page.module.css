@@ -1,0 +1,1547 @@
+/* 📖 HOMEPAGE STYLES - Styles specific to the homepage */
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  /* 🎨 Clean white background */
+  background-color: #ffffff;
+  overflow-x: hidden; /* 📦 Prevent horizontal scrolling */
+}
+
+/* ========================================
+   📖 NAVIGATION BAR STYLES
+   ======================================== */
+
+.navbar {
+  /* 🎨 Professional gray gradient */
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+
+  /* 📦 Centering and sizing for desktop */
+  width: 90%; /* Leaves 5% space on each side */
+  max-width: 1400px; /* Maximum width for very large screens */
+  margin-left: auto; /* 📍 Centers horizontally - pushes from left */
+  margin-right: auto; /* 📍 Centers horizontally - pushes from right */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px; /* Rounded corners for modern look */
+
+  /* ✨ Enhanced shadow for depth */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+  position: sticky; /* Stays at top when scrolling */
+  top: 1rem; /* Small gap from top of viewport */
+  z-index: 1000; /* Appears above other content */
+  padding: 1rem 0;
+}
+
+.navContent {
+  max-width: 1200px; /* Maximum width of content */
+  margin: 0 auto; /* Center the content */
+  padding: 0 2rem;
+  display: flex; /* Flexbox for layout */
+  justify-content: flex-start; /* 📍 Align logo and menu to the left */
+  align-items: center; /* Vertically center items */
+  gap: 3rem; /* 📏 Space between logo and menu items */
+  position: relative; /* 📱 Needed for mobile menu positioning */
+  flex-wrap: wrap; /* 📱 Allow menu to wrap to next line on mobile */
+}
+
+.logo h2 {
+  color: #ffffff; /* White text on dark background */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 1px;
+  /* ✨ Subtle glow effect for elegance */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 🍔 Hide hamburger on desktop - only show on mobile */
+.hamburger {
+  display: none;
+  background: none; /* Remove default button background */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Show pointer on hover */
+}
+
+.navMenu {
+  list-style: none; /* Remove bullet points */
+  display: flex;
+  gap: 2rem; /* Space between menu items */
+  margin: 0;
+  padding: 0;
+}
+
+.navMenu li a {
+  color: rgba(255, 255, 255, 0.9); /* White text with slight transparency */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500;
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+.navMenu li a:hover {
+  color: #cbd5e0; /* Light gray on hover - matches theme */
+  /* ✨ Subtle glow effect on hover for elegance */
+  text-shadow: 0 0 10px rgba(203, 213, 224, 0.6);
+}
+
+/* ========================================
+   📖 DROPDOWN MENU STYLES
+   For the Business submenu
+   ======================================== */
+
+/* Dropdown container - holds the submenu */
+.dropdown {
+  position: relative; /* Allows absolute positioning of submenu */
+}
+
+/* The dropdown menu itself - hidden by default */
+.dropdownMenu {
+  /* Hide the menu by default */
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the parent menu item */
+  left: 50%; /* 📍 Start from center */
+  transform: translateX(-50%) translateY(-10px); /* 📍 Center horizontally and start slightly above */
+
+  /* 🎨 Elegant styling to match navbar */
+  background-color: #ffffff;
+  min-width: 600px; /* 📏 Wider for horizontal layout */
+  max-width: 90vw; /* 📱 Don't exceed viewport width */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  border-radius: 8px; /* Rounded corners to match navbar */
+  border-top: 3px solid #4a5568; /* Gray accent line */
+  padding: 1rem; /* 📦 More padding for horizontal layout */
+  margin-top: 0.75rem; /* Small gap from parent */
+
+  /* Reset list styles */
+  list-style: none;
+
+  /* 📐 Horizontal layout with wrapping */
+  display: none; /* Will change to flex when visible */
+  flex-direction: row; /* Items in a row, not column */
+  flex-wrap: wrap; /* Allow wrapping to multiple rows if needed */
+  gap: 0.5rem; /* Space between items */
+  justify-content: center; /* Center items horizontally */
+
+  /* Animation - smooth appearance */
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  /* Ensure it appears above other content */
+  z-index: 1000;
+}
+
+/* Show dropdown when hovering over parent */
+.dropdown:hover .dropdownMenu {
+  display: flex; /* 📐 Show as flex for horizontal layout */
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* 📍 Keep centered, slide down to normal position */
+}
+
+/* Dropdown menu items - horizontal layout */
+.dropdownMenu li {
+  flex: 0 0 auto; /* 📐 Don't grow or shrink, auto width based on content */
+  min-width: 180px; /* 📏 Minimum width for each item */
+}
+
+.dropdownMenu li a {
+  display: block; /* Makes entire area clickable */
+  padding: 0.75rem 1.5rem; /* Comfortable spacing */
+  color: #505864; /* Dark gray text */
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 6px; /* 📦 Rounded corners for each item */
+  white-space: nowrap; /* 📝 Keep text on one line */
+  text-align: center; /* 📝 Center text in each item */
+}
+
+/* Hover effect for dropdown items */
+.dropdownMenu li a:hover {
+  background-color: #4a5568; /* Gray background */
+  color: #fff; /* White text */
+}
+
+/* ========================================
+   📖 HERO SECTION STYLES
+   Intro animation + Business slideshow
+   ======================================== */
+
+.hero {
+  min-height: 500px; /* Taller for impact */
+  height: 70vh; /* 70% of viewport height */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  color: white;
+  position: relative;
+  overflow: hidden; /* Hide slides outside viewport */
+}
+
+/* ========================================
+   🎭 INTRO ANIMATION STYLES
+   Shows "Aline Global Ltd" for 3 seconds
+   ======================================== */
+
+.introAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+  z-index: 10;
+  /* 🎬 Fade in animation */
+  animation: fadeIn 0.8s ease-in;
+}
+
+/* 🎬 Main intro title - "Aline Global Ltd" */
+.introTitle {
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  letter-spacing: 3px;
+  text-align: center;
+  /* ✨ Animated entrance - scale and fade */
+  animation: scaleIn 1.5s ease-out;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 📝 Intro subtitle */
+.introSubtitle {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 1rem;
+  letter-spacing: 2px;
+  text-align: center;
+  /* ✨ Delayed fade in */
+  animation: fadeIn 1.5s ease-in 0.5s both;
+}
+
+/* 🎬 Keyframe animations for intro */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ========================================
+   🎞️ SLIDESHOW STYLES
+   Displays 7 business sectors
+   ======================================== */
+
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 📸 Individual slide */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 1s ease-in-out;
+
+  /* 🎨 Mobile-first responsive background image */
+  background-size: cover; /* Image covers entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Don't repeat the image */
+
+  /* 📱 For mobile: ensure image fills properly */
+  background-attachment: scroll; /* Better performance on mobile */
+
+  /* 🖼️ Ensure proper aspect ratio handling */
+  object-fit: cover;
+}
+
+/* 📸 Active slide - visible */
+.slideActive {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* 🎨 Dark overlay for text readability over images */
+.slideOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 📱 Mobile-first: darker overlay for better readability */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+/* 📝 Slide content container */
+.slideContent {
+  text-align: center;
+  max-width: 900px;
+  padding: 2rem;
+  position: relative; /* 📍 Needed for z-index to work */
+  z-index: 3; /* ⬆️ Above overlay (z-index: 1) */
+  /* ✨ Animated entrance when slide becomes active */
+  animation: slideContentIn 0.8s ease-out;
+}
+
+/* 📖 Slide title */
+.slideTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* 📝 Slide subtitle */
+.slideSubtitle {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 1px;
+  line-height: 1.6;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎬 Slide content animation */
+@keyframes slideContentIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   📍 SLIDE INDICATORS (Dots)
+   ======================================== */
+
+.slideIndicators {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 10;
+}
+
+/* 📍 Individual indicator dot */
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+/* 📍 Active indicator */
+.indicatorActive {
+  background-color: white;
+  transform: scale(1.3);
+}
+
+/* 📍 Indicator hover effect */
+.indicator:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+/* ========================================
+   💻 DESKTOP OPTIMIZATIONS
+   For larger screens (tablets and up)
+   ======================================== */
+
+@media (min-width: 769px) {
+  /* 🖥️ Desktop: lighter overlay (images more visible) */
+  .slideOverlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
+
+  /* 🖥️ Desktop: fixed background for parallax effect */
+  .slide {
+    background-attachment: fixed; /* Parallax effect on desktop */
+  }
+
+  /* 🖥️ Desktop: enhanced text readability */
+  .slideTitle {
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7),
+                 0 6px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .slideSubtitle {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6),
+                 0 4px 16px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* ========================================
+   📖 MAIN CONTENT AREA
+   ======================================== */
+
+.main {
+  /* 📐 Removed max-width to allow full-width sections */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========================================
+   🏢 ABOUT US SECTION
+   ======================================== */
+
+.aboutSection {
+  padding: 5rem 2rem;
+  /* 🎨 Warm magenta-to-purple horizontal gradient - full width for all screen sizes */
+  background: radial-gradient(100vw 400px at 50% -50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+              linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
+  width: 100%; /* 📐 Ensure full width coverage */
+}
+
+/* 📖 Section Header */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff; /* 🎨 Changed to white for purple background */
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.sectionDivider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #4a5568 0%, #2d3748 100%);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* 📝 About Content Container */
+.aboutContent {
+  max-width: 1600px; /* 📐 Increased from 1000px for wider desktop coverage */
+  margin: 0 auto;
+  padding: 0 2rem; /* Add padding for mobile */
+}
+
+/* 📖 About Description */
+.aboutDescription {
+  margin-bottom: 4rem;
+  position: relative;
+
+  /* 🎨 White background like MD Message */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 3rem 3.5rem;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* ✨ Decorative curved wave removed for clean white background */
+
+.aboutText {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4a5568; /* 🎨 Gray text like MD Message */
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  position: relative;
+  z-index: 1;
+}
+
+.aboutText:last-child {
+  margin-bottom: 0; /* Remove bottom margin from last paragraph */
+}
+
+.aboutText strong {
+  color: #2d3748; /* 🎨 Darker gray for emphasis */
+  font-weight: 600;
+}
+
+/* 🏭 Industries Grid */
+.industriesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 📐 4 columns for 8 cards (2 rows) */
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+  justify-items: center; /* 📍 Center cards horizontally */
+  max-width: 1300px; /* 📐 Limit max width for better centering */
+  margin-left: auto; /* 📍 Center the grid container */
+  margin-right: auto; /* 📍 Center the grid container */
+}
+
+.industryCard {
+  /* 🎨 Glass effect for purple background */
+  background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.04) 100%);
+  border: 2px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%; /* 📐 Full width within grid cell */
+  max-width: 280px; /* 📐 Consistent max width for all cards */
+}
+
+.industryCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(249, 199, 79, 0.45); /* 🎨 Golden highlight on hover */
+  background: rgba(249, 199, 79, 0.15);
+}
+
+.industryIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+.industryCard:hover .industryIcon {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.industryName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff; /* 🎨 Changed to white for purple background */
+  margin: 0;
+}
+
+/* 💎 Core Values Section */
+.coreValues {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.valueCard {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.valueIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.valueTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.valueText {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ========================================
+   💼 MANAGING DIRECTOR'S MESSAGE SECTION
+   ======================================== */
+
+.mdSection {
+  padding: 5rem 2rem;
+  /* 🎨 Warm magenta-to-purple horizontal gradient - full width for all screen sizes */
+  background: radial-gradient(100vw 400px at 50% -50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+              linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
+  width: 100%; /* 📐 Ensure full width coverage */
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ Decorative background pattern */
+.mdSection::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.mdSection::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.mdContainer {
+  max-width: 1600px; /* 📐 Increased from 1200px for wider desktop coverage */
+  margin: 0 auto;
+  padding: 0 2rem; /* Add padding for mobile */
+  position: relative;
+  z-index: 1;
+}
+
+/* 📐 Wrapper for message + photo (side by side on desktop) */
+.mdContentWrapper {
+  display: flex;
+  align-items: flex-start; /* Align items to top */
+  gap: 3rem; /* Space between message and photo */
+  margin-bottom: 4rem;
+}
+
+/* 📝 MD Message Content - Left Side */
+.mdContent {
+  flex: 1; /* Take up available space */
+  min-width: 0; /* Prevent flex overflow */
+}
+
+.mdTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.mdMessage {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 3rem 3.5rem;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* 📖 Quote styling */
+.mdMessage::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  font-size: 8rem;
+  color: rgba(74, 85, 104, 0.15);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.mdText {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  position: relative;
+  z-index: 1;
+}
+
+.mdText:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.mdSignature {
+  text-align: right;
+  font-style: italic;
+  color: #2d3748;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.mdSignature p {
+  margin: 0;
+}
+
+/* ========================================
+   📸 DIRECTOR'S PHOTO - Right Side
+   ======================================== */
+
+/* 🖼️ Photo Container - Right Side */
+.mdPhotoContainer {
+  flex: 0 0 350px; /* Fixed width, doesn't grow or shrink */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* 🖼️ Photo Frame - Elegant border and shadow */
+.mdPhotoFrame {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 3/4; /* Professional portrait ratio */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+}
+
+.mdPhotoFrame:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+/* 📷 The actual photo */
+.mdPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* Focus on face area */
+  border-radius: 12px;
+  display: block;
+}
+
+/* ✨ Decorative Corner Accents - Golden/Brand Color */
+.photoCornerTL,
+.photoCornerTR,
+.photoCornerBL,
+.photoCornerBR {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(249, 199, 79, 0.8); /* Golden accent */
+}
+
+/* Top-Left Corner */
+.photoCornerTL {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+  border-top-left-radius: 20px;
+}
+
+/* Top-Right Corner */
+.photoCornerTR {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+  border-top-right-radius: 20px;
+}
+
+/* Bottom-Left Corner */
+.photoCornerBL {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+  border-bottom-left-radius: 20px;
+}
+
+/* Bottom-Right Corner */
+.photoCornerBR {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+  border-bottom-right-radius: 20px;
+}
+
+/* 📊 Statistics Container */
+.statsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.statCard:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.statNumber {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ========================================
+   🌍 GLOBAL PRESENCE SECTION
+   ======================================== */
+
+.globalPresenceSection {
+  padding: 5rem 2rem;
+  /* Horizontal gradient: Deep red-brown → Rosy pink → Dark purple */
+  background: linear-gradient(90deg, #983c36 0%, #c46196 50%, #781a56 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative light overlay for depth */
+.globalPresenceSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.globalPresenceContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== LEFT SIDE - TEXT CONTENT ========== */
+
+.globalPresenceLeft {
+  flex: 1;
+  max-width: 500px;
+}
+
+.globalPresenceTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 3rem 0;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.globalStats {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.globalStatItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.globalStatNumber {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.globalStatLabel {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ========== RIGHT SIDE - WORLD MAP ========== */
+
+.globalPresenceRight {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+}
+
+.mapContainer {
+  position: relative;
+  width: 100%;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
+}
+
+.worldMapImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.9;
+}
+
+/* Location Pins */
+.mapPin {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border: 2px solid #c46196;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.mapPin:hover {
+  transform: translate(-50%, -50%) scale(1.3);
+  z-index: 20;
+}
+
+/* Pulsing Animation for Pins */
+.pinPulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 2s ease-out infinite;
+  pointer-events: none;
+}
+
+/* Stagger the pulse animation for different pins */
+.mapPin:nth-child(2) .pinPulse { animation-delay: 0.1s; }
+.mapPin:nth-child(3) .pinPulse { animation-delay: 0.2s; }
+.mapPin:nth-child(4) .pinPulse { animation-delay: 0.3s; }
+.mapPin:nth-child(5) .pinPulse { animation-delay: 0.4s; }
+.mapPin:nth-child(6) .pinPulse { animation-delay: 0.5s; }
+.mapPin:nth-child(7) .pinPulse { animation-delay: 0.6s; }
+.mapPin:nth-child(8) .pinPulse { animation-delay: 0.7s; }
+.mapPin:nth-child(9) .pinPulse { animation-delay: 0.8s; }
+.mapPin:nth-child(10) .pinPulse { animation-delay: 0.9s; }
+.mapPin:nth-child(11) .pinPulse { animation-delay: 1s; }
+.mapPin:nth-child(12) .pinPulse { animation-delay: 1.1s; }
+.mapPin:nth-child(13) .pinPulse { animation-delay: 1.2s; }
+.mapPin:nth-child(14) .pinPulse { animation-delay: 1.3s; }
+.mapPin:nth-child(15) .pinPulse { animation-delay: 1.4s; }
+.mapPin:nth-child(16) .pinPulse { animation-delay: 1.5s; }
+.mapPin:nth-child(17) .pinPulse { animation-delay: 1.6s; }
+.mapPin:nth-child(18) .pinPulse { animation-delay: 1.7s; }
+.mapPin:nth-child(19) .pinPulse { animation-delay: 1.8s; }
+.mapPin:nth-child(20) .pinPulse { animation-delay: 1.9s; }
+
+@keyframes pulse {
+  0% {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+  }
+  100% {
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+  }
+}
+
+/* ========================================
+   🌍 RESPONSIVE DESIGN - GLOBAL PRESENCE
+   ======================================== */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1100px) {
+  .globalPresenceContainer {
+    gap: 3rem;
+  }
+
+  .globalPresenceTitle {
+    font-size: 3rem;
+  }
+
+  .globalStatNumber {
+    font-size: 3.5rem;
+  }
+
+  .globalStatLabel {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 900px) {
+  .globalPresenceSection {
+    padding: 4rem 2rem;
+  }
+
+  .globalPresenceContainer {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .globalPresenceLeft {
+    max-width: 100%;
+  }
+
+  .globalPresenceTitle {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .globalStats {
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .globalPresenceRight {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .globalPresenceSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .globalPresenceTitle {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .globalStats {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .globalStatNumber {
+    font-size: 3rem;
+  }
+
+  .globalStatLabel {
+    font-size: 1rem;
+  }
+
+  .worldMap {
+    max-width: 100%;
+  }
+}
+
+/* ========================================
+   🏢 SUBSIDIARY COMPANIES SECTION - Simple Logo Slider
+   ======================================== */
+
+.subsidiarySection {
+  padding: 5rem 0;
+  background-color: #ffffff;
+  overflow: hidden; /* Hide logos outside viewport */
+}
+
+/* 📝 Subsidiary section title - Gray color for white background */
+.subsidiarySection .sectionTitle {
+  color: #4a5568; /* 🎨 Gray color so it shows on white background */
+}
+
+/* 🎬 Logo Slider Container */
+.logoSlider {
+  width: 100%;
+  overflow: hidden;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  position: relative;
+}
+
+/* Fade effect on edges */
+.logoSlider::before,
+.logoSlider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logoSlider::before {
+  left: 0;
+  background: linear-gradient(to right, #f7fafc, transparent);
+}
+
+.logoSlider::after {
+  right: 0;
+  background: linear-gradient(to left, #edf2f7, transparent);
+}
+
+/* 🎬 Logo Track - Contains all logos */
+.logoTrack {
+  display: flex;
+  gap: 3rem;
+  animation: slideLogos 30s linear infinite;
+  width: fit-content;
+}
+
+/* Pause animation on hover */
+.logoTrack:hover {
+  animation-play-state: paused;
+}
+
+/* 📦 Individual Logo Box */
+.logoBox {
+  min-width: 200px;
+  height: 120px;
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #4a5568;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  /* Ready for logo images */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logoBox:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #4a5568;
+}
+
+/* 🖼️ Logo Images */
+.logoImage {
+  max-width: 85%;
+  max-height: 85%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+.logoBox:hover .logoImage {
+  filter: grayscale(0%);
+}
+
+/* 🎬 Sliding Animation */
+@keyframes slideLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move half width (duplicate logos) */
+  }
+}
+
+/* ========================================
+   📖 RESPONSIVE DESIGN - For tablet and mobile devices
+   ======================================== */
+
+/* 📱 Tablet - 3 columns for industry cards */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .industriesGrid {
+    grid-template-columns: repeat(3, 1fr); /* 📱 3 columns on tablet */
+    max-width: 900px; /* 📐 Limit width on tablet */
+  }
+
+  /* 📱 MD Section - Adjust photo size on tablets */
+  .mdPhotoContainer {
+    flex: 0 0 280px; /* Slightly smaller photo on tablets */
+  }
+
+  .mdContentWrapper {
+    gap: 2rem; /* Smaller gap on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  /* 📱 Mobile navbar - full width, no centering */
+  .navbar {
+    width: 100%;
+    margin: 0;
+    border-radius: 0; /* Remove rounded corners on mobile */
+    top: 0; /* Stick to very top */
+    overflow: visible; /* 📱 Allow dropdown menu to extend outside */
+  }
+
+  /* Navigation adjustments for mobile */
+  .navContent {
+    flex-direction: row; /* Keep horizontal for logo + hamburger */
+    flex-wrap: wrap; /* 📱 Allow menu to drop to next line */
+    justify-content: space-between; /* 📱 Logo left, hamburger right on mobile */
+    gap: 0;
+  }
+
+  /* 🍔 Hamburger menu button - will add in JS */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* 📱 Mobile menu - hidden by default */
+  .navMenu {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack menu items vertically */
+    gap: 0.5rem;
+    width: 100%; /* Full width on mobile */
+    text-align: center; /* Center the text */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%); /* Gray gradient */
+    padding: 1rem 0;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Show menu when active */
+  .navMenuActive {
+    display: flex;
+  }
+
+  /* Dropdown adjustments for mobile */
+  .dropdown {
+    width: 100%; /* Full width */
+  }
+
+  .dropdownMenu {
+    position: static; /* Remove absolute positioning on mobile */
+    min-width: 100%; /* Full width */
+    box-shadow: none; /* Remove shadow */
+    border-left: 3px solid #4a5568; /* Gray accent line */
+    background-color: #f9f9f9; /* Slightly different background */
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    /* 📱 Keep vertical layout on mobile */
+    flex-direction: column; /* Stack vertically on mobile */
+    transform: none; /* Remove horizontal centering transform */
+    left: 0; /* Align to left */
+    padding: 0.5rem 0; /* Adjust padding for mobile */
+  }
+
+  /* 📱 Mobile dropdown items - full width */
+  .dropdownMenu li {
+    width: 100%; /* Full width on mobile */
+    min-width: 100%;
+  }
+
+  .dropdownMenu li a {
+    text-align: left; /* Left-align text on mobile */
+    white-space: normal; /* Allow text wrapping on mobile */
+  }
+
+  /* Show dropdown by default on mobile (no hover needed) */
+  .dropdown:hover .dropdownMenu,
+  .dropdown .dropdownMenu {
+    display: none; /* Keep hidden until we add click functionality later */
+  }
+
+  /* For now, show dropdown on hover on mobile too */
+  .dropdown:hover .dropdownMenu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .dropdownMenu li a {
+    padding: 0.5rem 1rem; /* Smaller padding on mobile */
+    font-size: 0.9rem; /* Slightly smaller text */
+  }
+
+  /* 📱 Hero section mobile adjustments */
+  .hero {
+    height: 60vh; /* Shorter on mobile */
+    min-height: 400px;
+  }
+
+  /* 🎭 Intro animation mobile */
+  .introTitle {
+    font-size: 2.5rem; /* Smaller on mobile */
+    padding: 0 1rem;
+  }
+
+  .introSubtitle {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  /* 🎞️ Slideshow mobile */
+  .slideTitle {
+    font-size: 2rem; /* Smaller on mobile */
+    padding: 0 1rem;
+    /* 📱 Enhanced shadow for mobile readability over images */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8),
+                 0 4px 16px rgba(0, 0, 0, 0.6);
+  }
+
+  .slideSubtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+    /* 📱 Enhanced shadow for mobile readability over images */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8),
+                 0 3px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  /* 📱 Mobile: scroll-based background (better performance) */
+  .slide {
+    background-attachment: scroll;
+    background-size: cover;
+    /* 📱 Optimize for mobile viewport */
+    min-height: 100%;
+  }
+
+  /* 📍 Slide indicators mobile */
+  .slideIndicators {
+    bottom: 1rem; /* Closer to bottom on mobile */
+    gap: 0.5rem;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* 📱 About Us Section - Mobile */
+  .aboutSection {
+    padding: 3rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  /* 📱 Curved background adjustments for mobile */
+  .aboutDescription {
+    border-radius: 20px; /* Slightly less rounded on mobile */
+    padding: 2rem 1.5rem; /* Less padding for mobile */
+  }
+
+  .aboutDescription::before {
+    border-radius: 20px 20px 0 0; /* Match container radius */
+  }
+
+  .aboutText {
+    font-size: 1rem;
+    text-align: left; /* Better for mobile reading */
+  }
+
+  .industriesGrid {
+    grid-template-columns: repeat(2, 1fr); /* 📱 2 columns on mobile (4 rows of 2) */
+    gap: 1rem;
+    max-width: 600px; /* 📐 Limit width on mobile for better centering */
+  }
+
+  .industryCard {
+    padding: 1.5rem 1rem;
+  }
+
+  .industryIcon {
+    font-size: 2.5rem;
+  }
+
+  .industryName {
+    font-size: 0.95rem;
+  }
+
+  .coreValues {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .valueCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .valueIcon {
+    font-size: 3rem;
+  }
+
+  .valueTitle {
+    font-size: 1.3rem;
+  }
+
+  /* 📱 MD Section - Mobile */
+  .mdSection {
+    padding: 3rem 1rem;
+  }
+
+  .mdTitle {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  /* 📱 Stack message and photo vertically on mobile */
+  .mdContentWrapper {
+    flex-direction: column; /* Stack vertically */
+    gap: 2rem;
+  }
+
+  /* 📱 Photo takes full width on mobile */
+  .mdPhotoContainer {
+    flex: 1 1 auto; /* Allow to grow */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Limit max width */
+    margin: 0 auto; /* Center the photo */
+  }
+
+  .mdPhotoFrame {
+    max-width: 100%; /* Full width of container */
+  }
+
+  .mdMessage {
+    border-radius: 15px;
+    padding: 2rem 1.5rem;
+  }
+
+  .mdMessage::before {
+    font-size: 5rem;
+    top: -10px;
+    left: 15px;
+  }
+
+  .mdText {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .mdSignature {
+    font-size: 1rem;
+  }
+
+  /* 📱 Statistics - Mobile: Stack vertically */
+  .statsContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .statCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .statNumber {
+    font-size: 3rem;
+  }
+
+  .statLabel {
+    font-size: 1rem;
+  }
+
+  /* 📱 Logo Slider - Mobile */
+  .subsidiarySection {
+    padding: 3rem 0;
+  }
+
+  .logoSlider {
+    padding: 2rem 0;
+  }
+
+  .logoSlider::before,
+  .logoSlider::after {
+    width: 50px; /* Smaller fade edges on mobile */
+  }
+
+  .logoTrack {
+    gap: 2rem; /* Smaller gap on mobile */
+    animation: slideLogos 25s linear infinite; /* Slightly faster on mobile */
+  }
+
+  .logoBox {
+    min-width: 150px; /* Smaller logos on mobile */
+    height: 90px;
+    font-size: 0.85rem;
+  }
+}
