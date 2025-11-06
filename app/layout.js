@@ -7,8 +7,8 @@ import Footer from './components/Footer'
 
 // Metadata for SEO (Search Engine Optimization)
 export const metadata = {
-  title: 'Node Meta - IT Services & Solutions',
-  description: 'Node Meta provides comprehensive IT and BPO services',
+  title: 'Aline Group',
+  description: 'Aline Group provides comprehensive IT and BPO services',
 }
 
 // This is the main layout component
